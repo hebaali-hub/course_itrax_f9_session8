@@ -1,0 +1,242 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    font-family: 'Open Sans',arial;
+    margin: auto;
+    
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5em;
+
+}
+
+div.container {
+    width: 1250px;
+    margin: auto;
+}
+
+
+
+nav {
+   
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    /*! box-shadow: 10px 10px 115px white; */
+    border-bottom: 1px solid #fdfbfb36;
+     /* background-color: rgb(101 72 203 / 80%); */
+    padding-top: 20px;
+}
+
+nav div.logo {
+    width: 60%;
+    float: left;
+}
+
+nav div.logo img {
+    width: 25%;
+    /*! padding: 0px 0; */
+}
+
+nav div.list {
+    width: 40%;
+    float: right;
+}
+
+nav div.list ul {}
+
+nav div.list ul li {
+    list-style: none;
+    float: left;
+    padding: 10px 20px;
+}
+
+nav div.list ul li a {
+    text-decoration: none;
+    color: white;
+    /*  */
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+nav div.list ul li a i.fas{
+    font-size: 20px;
+}
+nav div.list ul li:last-child {
+    padding-right: 0;
+}
+
+nav div.list ul li:hover a {
+    color: #4274b7;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px #4274b7;
+}
+
+header {
+    width: 100%;
+    height: 835px;
+    background-image: url("../img/business-main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+}
+
+.overlay{
+    width:100%;
+    height: 100%;
+    background-color:rgba(185, 185, 185, 0.23);
+}
+header div.header_info {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+header div.header_info h1.content_head {
+    font-size: 76px;
+    margin-bottom: 18px;
+line-height: 1.2em;
+    font-weight: 100;
+}
+
+header div.header_info p.content_p {
+    font-size: 22px;
+    padding: 22px 0px 0px 0px;
+    /* font-weight: 600; */
+    line-height: 1.2;
+}
+header div.header_info p:last-of-type{
+    margin-bottom: 40px;
+}
+header div.header_info button.content_btn{
+    padding: 20px 40px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    background-color:white;
+    border:none;
+    outline: none;
+    margin-left: 5px;
+     margin-right: 5px;
+}
+header div.header_info button.btn1{
+    background-color:#4274b7;
+    
+}
+header div.header_info button.btn1 span{
+    color:white;
+}
+header div.header_info button.btn1:hover {
+     background-color:white;
+}
+header div.header_info button.btn1:hover span{
+    color:black;
+}
+
+header div.header_info button.btn2{
+    /* background-color:white; */
+    
+}
+header div.header_info button.btn2 span{
+   /* color:black; */
+}
+header div.header_info button.btn2:hover{
+    background-color:rgba(0,0,0,0.1);
+    
+}
+button.content_btn a{
+    text-decoration: none;
+}
+button.content_btn span{
+    color:black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.ball_box{
+    width:30px;
+    height: 50px;
+  
+    margin: 100px auto 0px;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+    border: 1px solid #fff;
+    position: relative;
+    overflow: hidden;
+
+
+}
+.ball_box .ball{
+     width: 10px;
+     height: 10px;
+     background:white;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+     position: absolute;
+     top:6%;
+     left:33%;
+     animation-name:ball_move;
+     animation-duration:  5s;
+     animation-timing-function:ease-in-out;
+     animation-fill-mode:both; 
+     animation-iteration-count:infinite;
+     /* -webkit-animation:ball_move 5s ease-in-out 1s; */
+}
+@keyframes ball_move {
+    0%{
+      top:6%;
+      opacity: 1;
+    }
+    10%{
+        top:15%;
+       opacity: 0.75;
+    }
+    25%{
+       top:25%;
+       opacity: 0.5;
+    }
+    35% {top:35%;
+       opacity: 0.35;}
+    50%{
+        top:45%; 
+        opacity: 0.25;
+    }
+     75%{
+        top:75%; 
+        opacity: 0.10;
+    }
+    100%{
+        top:125%;
+        opacity: 0;
+       
+    }
+    
+}
